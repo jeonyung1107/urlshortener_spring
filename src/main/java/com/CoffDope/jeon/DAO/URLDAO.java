@@ -17,4 +17,8 @@ public class URLDAO {
     public URLModel getURL(URLModel uv){
         return (URLModel) sqlSession.selectOne("URLDO.getURL",uv);
     }
+
+    public URLModel getURLbyID(URLModel uv){
+        return (URLModel) sqlSession.selectOne("URLDO.getURLbyID",uv);
+    }
 }

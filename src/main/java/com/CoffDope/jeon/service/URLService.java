@@ -6,4 +6,5 @@ public interface URLService {
     public void insertURL(URLModel urlModel);
     public URLModel getURL(URLModel urlModel);
     public void checkAndInsert(URLModel urlModel);
+    public URLModel getURLbyID(URLModel urlModel);
 }

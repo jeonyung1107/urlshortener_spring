@@ -24,4 +24,8 @@ public class URLServiceImpl implements URLService{
     public URLModel getURL(URLModel urlModel) {
         return urldao.getURL(urlModel);
     }
+
+    public URLModel getURLbyID(URLModel urlModel) {
+        return urldao.getURLbyID(urlModel);
+    }
 }

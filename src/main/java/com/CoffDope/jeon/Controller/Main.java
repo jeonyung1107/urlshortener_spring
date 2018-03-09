@@ -2,6 +2,7 @@ package com.CoffDope.jeon.Controller;
 
 import com.CoffDope.jeon.model.URLModel;
 import com.CoffDope.jeon.service.URLServiceImpl;
+import com.CoffDope.jeon.util.URLDecoder;
 import com.CoffDope.jeon.util.URLEncoder;
 import org.omg.PortableInterceptor.SYSTEM_EXCEPTION;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -37,8 +38,13 @@ public class Main {
 
     @RequestMapping("/short/{url}")
     public String redirectToShortened(Model model,@PathVariable String url){
-        System.out.println(url);
+        URLModel result = new URLModel();
+        int id = URLDecoder.decodeURL(url);
+        result.setId(id);
 
-        return "redirect:http://www.naver.com";
+        URLModel res = urlService.getURLbyID(result);
+        url = "redirect:https://" + res.getUrlLong();
+
+        return url;
     }
 }

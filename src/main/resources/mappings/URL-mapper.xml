@@ -17,4 +17,10 @@
         ]]>
 
     </select>
+    <select id="getURLbyID" resultType="URL">
+        <![CDATA[
+          SELECT  * FROM URL
+          WHERE ID = #{id}
+        ]]>
+    </select>
 </mapper>
