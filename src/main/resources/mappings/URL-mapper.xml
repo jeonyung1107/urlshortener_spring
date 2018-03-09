@@ -10,10 +10,10 @@
         ]]>
     </insert>
 
-    <select id="selectURL">
+    <select id="getURL" resultType="URL">
         <![CDATA[
           select * from URL
-          WHERE id = #{id}
+          WHERE urlLong = #{urlLong}
         ]]>
 
     </select>

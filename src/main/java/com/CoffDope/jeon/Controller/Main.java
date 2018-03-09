@@ -2,6 +2,7 @@ package com.CoffDope.jeon.Controller;
 
 import com.CoffDope.jeon.model.URLModel;
 import com.CoffDope.jeon.service.URLServiceImpl;
+import com.CoffDope.jeon.util.URLEncoder;
 import org.omg.PortableInterceptor.SYSTEM_EXCEPTION;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -18,15 +19,19 @@ public class Main {
 
     @RequestMapping(value = "/index",method = RequestMethod.GET)
     public String index(Model model){
-        System.out.println("hello!!");
         model.addAttribute("alarm", "plz insert URL");
         return "index";
     }
 
     @RequestMapping(value = "/index",method = RequestMethod.POST)
-    public String showURL(URLModel uv){
-        urlService.insertURL(uv);
-        System.out.println("hey!!");
+    public String showURL(Model model,URLModel uv){
+        urlService.checkAndInsert(uv);
+        URLModel result = urlService.getURL(uv);
+        if(null!=result){
+            String encoded = URLEncoder.encodeURL(result.getId());
+            String url = "localhost:8080/short/" + encoded;
+            model.addAttribute("alarm",url);
+        }
         return "index";
     }
 

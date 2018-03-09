@@ -1,5 +1,7 @@
 package com.CoffDope.jeon.model;
 
+import com.sun.istack.internal.Nullable;
+
 public class URLModel {
     private int id;
     private String urlLong;
@@ -13,6 +15,7 @@ public class URLModel {
         this.id = id;
     }
 
+    @Nullable
     public String getUrlLong() {
         return urlLong;
     }

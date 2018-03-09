@@ -2,6 +2,7 @@ package com.CoffDope.jeon.util;
 
 public class URLEncoder {
     final static private char[] BASE = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789".toCharArray();
+
     public static String encodeURL(int id){
         String result = "";
         int mod = 62;

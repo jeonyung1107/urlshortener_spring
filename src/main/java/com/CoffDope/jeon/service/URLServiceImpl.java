@@ -14,6 +14,13 @@ public class URLServiceImpl implements URLService{
         urldao.insertURL(urlModel);
     }
 
+    public void checkAndInsert(URLModel urlModel){
+        URLModel uv =  urldao.getURL(urlModel);
+        if(null == uv){
+            urldao.insertURL(urlModel);
+        }
+    }
+
     public URLModel getURL(URLModel urlModel) {
         return urldao.getURL(urlModel);
     }
