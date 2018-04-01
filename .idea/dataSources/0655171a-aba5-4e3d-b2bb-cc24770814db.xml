@@ -905,19 +905,19 @@
     </table>
     <column id="227" parent="226" name="id">
       <Position>1</Position>
-      <DataType>int(11)|0</DataType>
+      <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
     <column id="228" parent="226" name="urlLong">
       <Position>2</Position>
-      <DataType>varchar(1000)|0</DataType>
+      <DataType>varchar(1000)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
     <column id="229" parent="226" name="urlShort">
       <Position>3</Position>
-      <DataType>varchar(100)|0</DataType>
+      <DataType>varchar(100)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
     <key id="230" parent="226" name="PRIMARY">

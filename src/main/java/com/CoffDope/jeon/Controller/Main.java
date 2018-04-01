@@ -4,7 +4,6 @@ import com.CoffDope.jeon.model.URLModel;
 import com.CoffDope.jeon.service.URLServiceImpl;
 import com.CoffDope.jeon.util.URLDecoder;
 import com.CoffDope.jeon.util.URLEncoder;
-import org.omg.PortableInterceptor.SYSTEM_EXCEPTION;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -21,7 +20,7 @@ public class Main {
     @RequestMapping(value = "/index",method = RequestMethod.GET)
     public String index(Model model){
         model.addAttribute("alarm", "plz insert URL");
-        return "index";
+        return "WEB-INF/views/index";
     }
 
     @RequestMapping(value = "/index",method = RequestMethod.POST)
@@ -33,7 +32,7 @@ public class Main {
             String url = "localhost:8080/short/" + encoded;
             model.addAttribute("alarm",url);
         }
-        return "index";
+        return "WEB-INF/views/index";
     }
 
     @RequestMapping("/short/{url}")
