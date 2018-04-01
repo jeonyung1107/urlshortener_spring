@@ -17,13 +17,13 @@ public class Main {
     @Autowired
     URLServiceImpl urlService;
 
-    @RequestMapping(value = "/index",method = RequestMethod.GET)
+    @RequestMapping(value = "/index", method = RequestMethod.GET)
     public String index(Model model){
         model.addAttribute("alarm", "plz insert URL");
         return "WEB-INF/views/index";
     }
 
-    @RequestMapping(value = "/index",method = RequestMethod.POST)
+    @RequestMapping(value = "/index", method = RequestMethod.POST)
     public String showURL(Model model,URLModel uv){
         urlService.checkAndInsert(uv);
         URLModel result = urlService.getURL(uv);

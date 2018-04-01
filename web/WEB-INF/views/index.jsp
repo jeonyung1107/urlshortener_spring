@@ -17,8 +17,21 @@
     <script src="${pageContext.request.contextPath}/res/bootstrap/js/bootstrap.min.js"></script>
     <script src="http://code.jquery.com/jquery-2.1.1.min.js" type="text/javascript"></script>
 </head>
-
 <body>
+
+<nav class="navbar navbar-default">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="/index">짧유</a>
+        </div>
+        <div>
+            <ul class="navbar-nav">
+                <li class="active"><a href="/index"></a> </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
 <div class="container">
     <div class="jumbotron">
         <h1>URL Shortener!!</h1>
