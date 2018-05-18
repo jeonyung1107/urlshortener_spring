@@ -903,26 +903,46 @@
     <table id="226" parent="2" name="URL">
       <Engine>InnoDB</Engine>
     </table>
-    <column id="227" parent="226" name="id">
+    <table id="227" parent="2" name="USER">
+      <Engine>InnoDB</Engine>
+    </table>
+    <column id="228" parent="226" name="id">
       <Position>1</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="228" parent="226" name="urlLong">
+    <column id="229" parent="226" name="urlLong">
       <Position>2</Position>
       <DataType>varchar(1000)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="229" parent="226" name="urlShort">
+    <column id="230" parent="226" name="urlShort">
       <Position>3</Position>
       <DataType>varchar(100)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <key id="230" parent="226" name="PRIMARY">
+    <key id="231" parent="226" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="232" parent="227" name="ID">
+      <Position>1</Position>
+      <DataType>varchar(100)|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="233" parent="227" name="PASSWORD">
+      <Position>2</Position>
+      <DataType>varchar(100)|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <key id="234" parent="227" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>ID</ColNames>
       <Primary>1</Primary>
     </key>
   </database-model>

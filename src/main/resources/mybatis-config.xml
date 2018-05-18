@@ -19,9 +19,7 @@
 
     <typeAliases>
         <typeAlias type="com.CoffDope.jeon.model.URLModel" alias="URL"/>
+        <typeAlias type="com.CoffDope.jeon.model.UserModel" alias="user"/>
     </typeAliases>
 
-    <mappers>
-        <mapper resource="mappings/URL-mapper.xml"/>
-    </mappers>
 </configuration>

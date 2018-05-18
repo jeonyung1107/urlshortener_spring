@@ -7,15 +7,26 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
-@Controller("/login")
+import javax.servlet.http.HttpSession;
+
+@Controller
+@RequestMapping("/login")
 public class LoginController {
 
     @Autowired
     LoginService loginService;
 
-    @RequestMapping(method = RequestMethod.POST)
-    public String login(UserModel userModel){
+    @RequestMapping(method = RequestMethod.GET)
+    public String toLoginPage(){
+        return "login";
+    }
 
-        return null;
+    @RequestMapping(method = RequestMethod.POST)
+    public String login(UserModel userModel, HttpSession session){
+        if(true == loginService.login(userModel)){
+            session.setAttribute("login",userModel.getId());
+        }
+
+        return "index";
     }
 }

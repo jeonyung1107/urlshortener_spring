@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="URLS">
+    <output-path>$PROJECT_DIR$/out/artifacts/URLS</output-path>
+    <root id="archive" name="URLS.war">
+      <element id="artifact" artifact-name="URLShortener:war exploded" />
+    </root>
+  </artifact>
+</component>

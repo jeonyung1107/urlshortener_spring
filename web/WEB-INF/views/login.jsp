@@ -21,11 +21,13 @@
 
 <div class="container">
     <div class="jumbotron">
-        <form action="/login">
-            <input class="form-control" type="text" placeholder="ID"/>
-            <input class="form-control" type="text" placeholder="Password"/>
-            <input class="btn btn-primary" type="submit" value="로그인"/>
+        <div class="form-group center-block" style="width: 300px">
+        <form action="login" method="post">
+            <input class="form-control" type="text" name="id" placeholder="id"/>
+            <input class="form-control" type="text" name="password" placeholder="Password"/>
+            <input class="btn btn-primary btn-block" type="submit" value="로그인"/>
         </form>
+        </div>
     </div>
 </div>
 

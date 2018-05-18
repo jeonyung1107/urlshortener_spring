@@ -18,34 +18,31 @@
     <script src="http://code.jquery.com/jquery-2.1.1.min.js" type="text/javascript"></script>
 </head>
 <body>
-
 <nav class="navbar navbar-default">
     <div class="container-fluid">
         <div class="navbar-header">
             <a class="navbar-brand" href="/index">짧유</a>
         </div>
         <div>
-            <ul class="navbar-nav">
-                <li class="active"><a href="/index"></a> </li>
+            <ul class="nav navbar-nav">
+                <li><a href="/login">login</a> </li>
             </ul>
         </div>
     </div>
 </nav>
-
 <div class="container">
     <div class="jumbotron">
-        <h1>URL Shortener!!</h1>
-
-        <form class="form-inline" action="/index" method="post">
-            <div class="form-group">
-                <div class="input-group center-block" style="width: 300px">
+        <h1 class="text-center">URL Shortener!!</h1>
+        <div class="form-group center-block" style="width: 300px">
+            <form class="form-inline" action="/index" method="post">
+                <div class="input-group">
                     <span class="input-group-addon">@</span>
                     <input class="form-control" name="urlLong" type="text"/>
                 </div>
                 <input class="btn btn-default" type="submit" value="변환"/>
-            </div>
-        </form>
-        <h3>${alarm}</h3>
+            </form>
+        </div>
+        <h3 class="text-center">${alarm}</h3>
     </div>
 </div>
 </body>
